@@ -5,6 +5,8 @@ class Windows(bttk.Window):
     def __init__(self, *args, **kwargs):
         bttk.Window.__init__(self, *args, **kwargs)
 
+        self.style = bttk.Style(theme='darkly')
+
         self.title('Mankai')
 
         container = bttk.Frame(self, width=1100, height=700)
