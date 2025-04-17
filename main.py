@@ -1,15 +1,13 @@
-import ttkbootstrap as bttk
+import customtkinter as ctk
 import tkinter as tk
 
-class Windows(bttk.Window):
+class Windows(ctk.CTk):
     def __init__(self, *args, **kwargs):
-        bttk.Window.__init__(self, *args, **kwargs)
-
-        self.style = bttk.Style(theme='darkly')
+        ctk.CTk.__init__(self, *args, **kwargs)
 
         self.title('Mankai')
 
-        container = bttk.Frame(self, width=1100, height=700)
+        container = ctk.CTkFrame(self, width=1100, height=700)
         container.grid_propagate(False)
         container.pack(side='top', fill='both', expand=True)
         container.grid_rowconfigure(0, weight=1)
@@ -28,39 +26,57 @@ class Windows(bttk.Window):
         page = self.pages[current_page]
         page.tkraise()
     
-class RegisterPage(bttk.Frame):
+class RegisterPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
-        bttk.Frame.__init__(self, parent)
+        ctk.CTkFrame.__init__(self, parent)
         self.controller = controller
 
-class LoginPage(bttk.Frame):
+        self.create_widgets()
+
+    def create_widgets(self):
+        show_register = ctk.CTkLabel(self, text='Register Page!')
+        switch = ctk.CTkButton(self, text='Switch to Login.', command=lambda: self.controller.show_page(LoginPage))
+
+        show_register.pack()
+        switch.pack()
+
+class LoginPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
-        bttk.Frame.__init__(self, parent)
+        ctk.CTkFrame.__init__(self, parent)
         self.controller = controller
 
-class DiscoveryPage(bttk.Frame):
+        self.create_widgets()
+
+    def create_widgets(self):
+        show_register = ctk.CTkLabel(self, text='Login Page!')
+        switch = ctk.CTkButton(self, text='Switch to Register.', command=lambda: self.controller.show_page(RegisterPage))
+
+        show_register.pack()
+        switch.pack()
+
+class DiscoveryPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
-        bttk.Frame.__init__(self, parent)
+        ctk.CTkFrame.__init__(self, parent)
         self.controller = controller
 
-class SearchPage(bttk.Frame):
+class SearchPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
-        bttk.Frame.__init__(self, parent)
+        ctk.CTkFrame.__init__(self, parent)
         self.controller = controller
 
-class MyListPage(bttk.Frame):
+class MyListPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
-        bttk.Frame.__init__(self, parent)
+        ctk.CTkFrame.__init__(self, parent)
         self.controller = controller
 
-class EntryPage(bttk.Frame):
+class EntryPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
-        bttk.Frame.__init__(self, parent)
+        ctk.CTkFrame.__init__(self, parent)
         self.controller = controller
 
-class SettingsPage(bttk.Frame):
+class SettingsPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
-        bttk.Frame.__init__(self, parent)
+        ctk.CTkFrame.__init__(self, parent)
         self.controller = controller
 
 
