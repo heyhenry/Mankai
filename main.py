@@ -1,6 +1,9 @@
 import customtkinter as ctk
 import tkinter as tk
 
+ctk.set_appearance_mode("System") 
+ctk.set_default_color_theme("green")
+
 class Windows(ctk.CTk):
     def __init__(self, *args, **kwargs):
         ctk.CTk.__init__(self, *args, **kwargs)
