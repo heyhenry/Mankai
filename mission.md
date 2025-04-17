@@ -1,5 +1,6 @@
 # to do next
-- Create wireframe for the register and login pages (in process of register page)
+- Swap tkinter library from 
+- Create wireframe for the register and login pages x
 
 # waaay later 
 - implement email field and save data (probably at the registeration level), for potentially recovering account or newsletters or changelog updates?
@@ -7,6 +8,11 @@
         - ability to amend/update in the settingspage at a later date if the user decides to change their mind
     * personal note to self: this is actually great i think because saving their passwords with their usernames would give them a method of recovery, but also since the data usage is localised, if anyone wanted to hack them, they would need to be on the specific computer that hosts the app's data?
         - got to still think about this some more, puzzle not fully solved... visually.
+
+# things to consider later
+- recover account will send an email from mankai@email to the user's given email that will give both the username and password
+- the quotes on either side of the login form, will be randomised and different each time the page is shown
+- the quotes on either side of the login form, may instead be swapped with custom imagery, a cool/wavy ambient colour or curated quotes from manga, anime etc.
 
 # Completed:
 ### 17th April 
