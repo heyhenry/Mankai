@@ -1,6 +1,4 @@
-# to do next
-- Swap tkinter library from 
-- Create wireframe for the register and login pages x
+# to do next 
 
 # waaay later 
 - implement email field and save data (probably at the registeration level), for potentially recovering account or newsletters or changelog updates?
@@ -15,7 +13,12 @@
 - the quotes on either side of the login form, may instead be swapped with custom imagery, a cool/wavy ambient colour or curated quotes from manga, anime etc.
 
 # Completed:
-### 17th April 
+
+### 18th April:
+- Swap tkinter library from ttkbootstrap to customtkinter
+- Create wireframe for the register and login pages
+
+### 17th April :
 - General research to confirm project decision
 - Create app name
 - Create app motto/s
